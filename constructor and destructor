@@ -1,3 +1,4 @@
+//CONSTRUCTOR AND ITS TYPES,DESTRUCTOR
 #include<iostream.h>
 #include<conio.h>
 #include<time.h>
