@@ -1,3 +1,4 @@
+//STATIC VARIABLES AND FUNCTIONS,INLINE FUNCTIONS
 #include<iostream.h>
 #include<conio.h>
 #include<time.h>
