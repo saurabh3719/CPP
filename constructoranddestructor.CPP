@@ -1,0 +1,147 @@
+#include<iostream.h>
+#include<conio.h>
+#include<dos.h>
+#include<string.h>
+struct dosdate_t l;
+int acc=0;
+
+class account
+{
+	private:
+		int d,m,y;
+		int a,b,c;
+		int cou;
+		int an;
+		char *name;
+	public:
+		account();
+		~account();
+		account(int n,char *ch,int q,int w,int e)
+		{
+			strcpy(name,ch);
+			an=n;
+			d=q;
+			m=w ;
+			y=e ;
+
+		}
+		void showdata();
+		void age();
+		void namelength();
+
+};
+void account :: namelength()
+{
+	int i;
+	for(i=0;i<20;i++)
+	{
+		if(name[i]!='\0')
+		{
+			cou++;
+		}
+		else
+		{
+			cou=i;
+			break;
+		}
+
+	}
+}
+
+
+account:: ~account(void)
+{
+	cout<<"\n \n destructor is called \n ";
+
+
+}
+
+void account :: account()
+{
+	if(an==0)
+	{
+		cout<<"\n Enter account no : ";
+		cin>>an;
+		acc++;
+	}
+	else
+	{
+		an=an++;
+		acc++;
+	}
+	name=new char[20];
+	cout<<"\n Enter name : ";
+	cin>>name;
+	cout<<"\n Enter date of birth : ";
+	cin>>d>>m>>y;
+}
+void account :: showdata()
+{
+	cout<<"\n ur name is "<<name;
+	cout<<"\n ur name length is " <<cou;
+	cout<<"\n ur age is "<<a<<"yrs "<<b<<"months "<<c<<"days";
+	cout<<"\n ur acc no is "<<an;
+
+
+}
+     void account:: age()
+	{
+		int p,q,r;
+	     //	int a,b,c;
+	_dos_getdate(&l);
+
+	p=l.day;
+	q=l.month;
+	r=l.year;
+       //	cout<<p<<q<<r;
+
+
+		a=r-y;
+		b=q-m;
+		c=p-d;
+	      //	 cout<<a<<b<<c;
+		if(b<0)
+		{
+			a=a-1;
+			b=b+12;
+		}
+		if(c<0)
+		{
+			b=b-1;
+			c=c+30;
+		}
+
+       }
+
+void main()
+{
+	int i;
+	clrscr();
+	account a;
+	cout<<"\n default constructor \n" ;
+	account a2=a;
+	a.age();
+	a.namelength();
+	a.showdata();
+
+	cout<<"\n \n copy constructor \n " ;
+	a2.age();
+	a2.namelength();
+	a2.showdata();
+
+	cout<<"\n \n paramaterised constructor \n ";
+	account a1(1,"sara",12,12,2012);
+	a1.age();
+	a1.namelength();
+	a1.showdata();
+
+	cout<<"\n \n dynamic constructor";
+	account *a3;
+	a3=new account;
+	a3->age();
+	a3->namelength();
+	a3->showdata();
+	delete a3;
+
+	getch();
+}
