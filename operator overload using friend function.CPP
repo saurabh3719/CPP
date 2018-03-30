@@ -1,4 +1,24 @@
-#include<iostream.h>
+Operator Overloading
+Create class "Distance" with following specifications :
+Data members => Km, Meter and CM
+Member functions => Constructor to initialize object, Display function to display values
+1) Overload Binary +
+Should add 2 distance objects and assign value to 3rd object.
+d3=d1+d2;    
+Overload using member function.
+Note -: After addition value of cm should not be greater then 100. In that case, it should increase value of "meter" by 1. Similarly it should work for "meters".
+2) Overload Unary ++
+Should increment value of km, meter, and cm by 1.
+++d1;
+Overload using friend function.
+3) Overload < operator
+Should compare 2 distance objects and return an integer value.
+int x= d1 < d2;
+Value of 'x' = 0 if d1==d1
+x=-1 if d1>d2
+x=1 if d1<d2
+Overload using friend function.#include<iostream.h>
+
 #include<conio.h>
 
 class distance
