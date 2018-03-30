@@ -1,3 +1,19 @@
+Implement C++ program to demonstrate concept of Class & Object using Bank Account.
+1) Create Account Class with following data members.
+Customer name, Account Number,Birth Date (in form of DD-MM-YYYY)
+Keep above data members as Private.
+
+2) Create following member functions. Keep them public.
+getdata() => To accept Account details from User. Account number should be system generated (start with 01 & increment every time)
+showdata()=> To display account details
+FindAge() => Display age in form of Years Months & Days. Use system date using proper libraries.
+FindNameLength => Display length of customer name. Dont use any string library function.
+
+Also demonstrate following thins :
+3) Use array of Objects.
+4) Use "new" to create objects.
+5) Define function outside class. 
+
 #include<iostream.h>
 #include<conio.h>
 #include<time.h>
