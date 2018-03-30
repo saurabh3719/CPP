@@ -1,4 +1,15 @@
-#include<iostream.h>
+Friend Function & Friend Class
+
+Implement program with following features :
+1) Making a regular function friend of the class
+Add a non-member function Bonus().
+The function should accept Account class object as argument & increase balance of the account by Rs. 5000/-
+2) Making a member function of one class friend of other class
+Add another class IncomeTax having member functions  CalculateTax() and DisplayTax(). The class should have one data member as Calculated_tax.
+CalculateTax() ==> Should be friend of Account class. Should calculate tax as below:
+Tax= 10% of account balance
+DisplayTax() ==> Should display calculated tax:#include<iostream.h>
+
 #include<conio.h>
 
 class account;
