@@ -1,3 +1,9 @@
+implement program as per following specifications :
+1) Create static variable in Account class. Use this static variable to assign account numbers in incremental way to different Objects.
+2) Create & call a static function which displays content of above static variable.
+3) Declare 1-2 member functions as inline & understand working of inline functions. 
+
+
 #include<iostream.h>
 #include<conio.h>
 #include<dos.h>
